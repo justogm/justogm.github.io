@@ -1,0 +1,66 @@
+¿Qué es una red de computadoras?|
+¿En qué se diferencia una red de computadoras con un sistema distribuido?|
+En un modelo de comunicaciones simplificado ¿En que se diferencian la fuente del transmisor?|
+¿En qué se diferencian los medios guiados de los no guiados?|
+¿En qué se diferencian las transmisiones half dúplex de las full dúplex?|
+¿En qué se diferencian las señales analógicas de las digitales?|
+Defina espectro de una señal|
+Defina ancho de banda de una señal|
+¿Qué es el ancho de banda de un medio de transmisión?|
+¿Que es la atenuación?|
+Defina capacidad de un canal de transmisión|
+¿Qué factores afectan la capacidad de un canal?|
+Calcule el ruido térmico producido a 40° C|
+Calcule el ruido térmico generado por un transmisor que emite una señal de 40Mhz de ancho de banda a 38 °C. Compárelo para el caso de que la temperatura de operación sea 25°C.|
+Enumere 4 tipos de ruido que afecten a las telecomunicaciones.|
+¿Qué información permite obtener la fórmula del ancho de banda de Nyquist?|
+¿Cómo se calcula la relación señal ruido medida en decibeles?|
+¿Qué información se puede obtener con la formula de Shannon? ¿En qué se diferencia con la de Nyquist?|
+Calcule la capacidad de un canal inalámbrico de 20MHz cuya relación señal ruido es 3 db|
+¿Las ondas electromagnéticas se propagan siempre a la misma velocidad? Explique|
+En el caso de las ondas electromagnéticas ¿Qué relación hay entre la frecuencia y la longitud de onda?|
+¿Qué entiende por Espectro Electromagnético?|
+¿Qué es un medio de transmisión?|
+¿Cuántos tipos de medios de transmisión conoce?|
+Enumere cuatro medios de transmisión y de por lo menos dos ventajas de cada uno en relación al resto|
+¿Qué importancia tiene el ancho de banda de un medio de transmisión?|
+¿Cómo se puede aumentar la tasa de transferencia en una comunicación de datos?|
+¿Qué es la relación señal ruido? ¿Cómo se la calcula en Decibeles?|
+¿Cual es la diferencia entre el par trenzado no apantallado y el par trenzado apantallado?|
+¿Qué fenómenos ópticos rigen al funcionamiento de la Fibra Óptica? Explique|
+¿Qué diferencia constructiva hay entre la fibra óptica monomodo y la multimodo? Explique su influencia en la propagación del haz de luz y en la performance alcanzada en la transmisión|
+¿Qué es una antena?|
+¿Para qué se utiliza una antena?|
+¿Qué tipos de antena conoce? Describa sus características principales.|
+¿Qué es una antena isotrópica?|
+¿Qué es un diagrama de irradiación de una antena?|
+¿Qué es la ganancia de una antena?|
+¿Qué es un dBi? Explique en el marco del concepto de ganancia de una antena.|
+¿Qué diferencias hay entre las ondas de radio y las microondas?|
+¿En qué afecta la curvatura de la tierra a las transmisiones de ondas electromagnéticas? ¿Cómo se resuelve esa afectación?|
+¿Qué entiende por Zona de Fresnel?|
+¿Qué son las redes de área local?|
+¿Qué características tienen?|
+¿Qué elementos las definen?|
+¿Qué es la topología de una red?|
+¿Qué importancia tienen las redes locales en el ámbito de la Bioinformática? Ejemplifique|
+Enumere cuatro topologías comunes para redes LAN.|
+¿Qué funciones lleva a cabo un puente?|
+¿Qué funciones lleva a cabo un switch?|
+¿Qué funciones lleva a cabo un hub?|
+¿Qué funciones lleva a cabo un router?|
+¿Qué diferencias operativas se obtienen al utilizar un switch en vez de un hub?|
+¿Cuándo es necesario utilizar un router?|
+¿Qué entiende por conmutación de circuitos? Ejemplifique|
+¿Qué entiende por conmutación de paquetes? Ejemplifique|
+¿Qué significa la sigla CSMA/CD?|
+¿Qué técnicas de acceso al medio utiliza Ethernet?|
+¿Qué entiende por colisión en el ámbito de las redes de comunicaciones digitales?|
+¿Cómo Ethernet detecta las colisiones?|
+¿Qué sucede en Ethernet cuando se detecta una colisión?|
+¿Por qué Ethernet utiliza una codificación Manchester en su acceso al medio?|
+¿Qué es una dirección MAC? ¿En qué capa del modelo OSI la ubicaría? ¿Por qué?|
+¿Qué es una trama Ethernet?|
+¿Qué es un protocolo?|
+¿Qué es un Program Data Unit o PDU?|
+Describa cada una de las capas del modelo OSI y explique las funciones principales de cada una.|
