@@ -1,0 +1,40 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #434C5E; /* Cambia el color de fondo */
+    color: #E5E9F0; /* Cambia el color del texto */
+}
+
+.container {
+    position: relative;
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #E5E9F0;
+    border-radius: 5px;
+    background-color: #3B4252; /* Cambia el color de fondo del contenedor */
+}
+
+button {
+    margin: 10px;
+    background-color: #81A1C1;
+    color: #E5E9F0;
+    border: none; /* Elimina el borde por defecto */
+    border-radius: 10px; /* Ajusta el valor para la redondez de los bordes */
+    padding: 10px 20px; /* Ajusta el relleno (padding) del botón según tus necesidades */
+    cursor: pointer; /* Cambia el cursor al pasar el mouse sobre el botón */
+}
+
+/* Estilos CSS para el contador */
+.counter {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    background-color: transparent;
+    color: #fff;
+    border-radius: 0 10px 0 0;
+}
+
+
+/* Agrega más reglas de estilo según tus necesidades */

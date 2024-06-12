@@ -1,0 +1,29 @@
+﻿¿A qué corresponde un All-gather?|Equivale a hacer un "gather" seguido de un "broadcast"
+¿A qué corresponde un All-to-All?¿Y su versión vectorizada?|Equivale a hacer un scatter desde P0 seguido de un scatter desde P1, etc.\nP0: [A0, A1, A2, A3] -> P0: [A0, B0, C0, D0]\nP1: [B0, B1, B2, B3] -> P1: [A1, B1, C1, D1]\nP2: [C0, C1, C2, C3] -> P2: [A2, B2, C2, D2]\nP3: [D0, D1, D2, D3] -> P3: [A3, B3, C3, D3]\nHace lo mismo pero con fragmentos de tamaño variable.
+¿Que permite un scatter vectorizado?¿Qué parametro añade/modifica su firma?|Es igual que MPI_Scatter() pero permite que la cantidad de datos a mandar a cada procesador sea variable.\nAhora sendcnt y recvcnt serán arreglos y deberán añadirse los desplazamientos.
+¿Qué permite un Gather vectorizado?¿Qué utilidad le encontrarías?|Es igual al gather, pero recibe una longitud de datos variabilidad de cada procesador.\nPara mostrar el contenido de un buffer, resultado de concatenar varios buffers de tamaño variable de forma ordenada.
+¿Que hace la operación de All-Gatherv?|Equivale a hacer un gatherv en uno de los nodos y luego enviarlo a todos con un broadcast.
+En el contexto del teorema de los número primos, ¿qué es π(x)? ¿qué establece el teorema?|Es el número de primos menores o iguales que x.\nEl teorema establece que π(x) approx x / log(x).
+¿Cómo es la escalabilidad en el cálculo de números primos?|Determinar si un dado número j es de costo muy variable. Para los pares es casi inmediato determinar que no son primos. En el peor de los casos es O(sqrt(j)), porque dividimos desde 2 hasta sqrt(j).
+¿Cómo es el tiempo en el caso de algoritmo con división estática para los nros primos? ¿Cómo se calcula?|Tendremos tiempo variable. T_n = T_comp, i + T_sync, i + T_comm
+¿Como calculo escalabilidad teniendo los tres tiempos?|(total comp. time)/((total comp. time) + (total comm. + sync. time))
+¿Qué es OpenMP?|Es una API para la programación multiproceso de memoria compartida. Se compone de directivas de 
+¿En que modelo de ejecución se basa OpenMP?|Se basa en el modelo fork-join.\nUna tarea pesada se divide en K hilos (fork) con menor perso, para luego "recolectar" sus resultados al final y unirlos en un solo resultado (join).
+¿Cuál es la sintaxis básica de una directiva de OpenMP?|#pragma omp <directiva> [clausula [, ...] ...]
+¿Se da alguna barrera de sincronización en las directivas de OpenMP?|Al final, a lo sumo que se indique lo contrario con la cláusula nowait.
+¿Por qué son modelos de memoria compartida?|Porque todos los hilos (threads) de ejecución tienen acceso a una misma memoria compartida.\nSe puede definir la privacidad de los datos\nExiste sincronización pero generalmente implícita.
+¿Qué es una región paralela en OpenMP?|Es un bloque de código que es ejecutado por todos los hilos simultáneamente. Ajustes sobre los hilos sólo son posibles antes de ingresar a una región paralela.
+¿Cuáles son los componentes de OpenMP?|1.Directivas\n2.Variable de entorno\n3.Entorno de ejecución.
+¿Qué tipos de directivas tiene OpenMP?|1.Regiones paralelas\n2.Trabajo compartido\n3.Sincronización
+¿Qué son las cláusulas de OpenMP? ¿Son siempre las mismas?|Son información adicional que se le añaden a las directivas.\nLas posibles cláusulas varían dependiendo de la directiva.
+¿Qué hace la cláusula private? ¿Cuándo están definidos los valores? ¿Como se modifica este comportamiento?|Hace que se creen objetos locales y las variables serán privadas. Los valores no están definidos ni a la entrada, ni a la salida.\nSe puede modificar el comportamiento con dos cláusulas:\n1.Firstprivate: todas las variables se inicializan con el valor que tiene el objeto antes de ingresar al constructor paralelo.\n2.Lastprivate: el último hilo que lo modifica actualiza el valor del objeto.
+¿Qué hace la cláusula default? ¿Qué valores puede tomar?|Declara el tratamiento por defecto de las variables.\nPuede ser none o shared.
+¿Qué hace la cláusula reduction? ¿Se puede hacer con todas las variables?|Es una cláusula para juntar los resultados de todos los hilos.Permite evitar el fenómeno de race condition.\nDebe hacerse sobre variables compartidas.
+¿Qué son los constructores de trabajo distribuido?¿Lanza nuevos hilos?|Son directivas que se utilizan para distribuir el trabajo sobre todos los hilos de ejecución. Deben estar dentro de una región paralela y todos los hilos deben encontrar el constructor.\nNo lanzan nuevos hilos, reparten el trabajo.\nSon:\n- For\n- Sections\n- Single
+¿Qué hace la cláusula schedule?¿Qué algoritmos soporta?|Realiza la distribución de trabajo con diversos algoritmos.\n-Static: Distribuye las iteraciones de manera round-robin, en bloques de tamaño “chunk”.\n-Dynamic: Porciones fijas pero cuando uno finaliza se le asigna un nuevo chunk.\n-Guided:Similar comportamiento que dynamic pero el tamaño de chunk decae exponencialmente.
+¿Qué hace la directiva sections?|Se utiliza para dividir el trabajo en secciones independientes. Cada sección se ejecuta en hilo separado. Es útil cuando se tienen varias tareas que pueden ejecutarse de forma independiente.
+¿Qué es orphaning?|Es cuando una directiva no está en la extensión lógica de la región paralela. Cuando una directiva está dentro de una parte secuencial del programa sólo la ejecuta el master.
+¿Qué son las regiones críticas?|Son regiones en las cuales el código lo ejecuta un hilo a la vez. Es útil para evitar condiciones de carrera o para realizar I/O, pero hay que tener cuidado porque lo estamos serializando.
+¿Qué son las regiones single processor?|Son regiones en las que el código las ejecuta un solo hilo. Es adecuado para operaciones de I/O.
+¿Qué hace la directiva ordered?|Hace que se ejecute en orden como si las iteraciones fueran ejecutadas de manera secuencial.
+¿Qué hace la directiva flush?|Asegura que todos los threads en el equipo tienen una vista consistente de los objetos en memoria.
