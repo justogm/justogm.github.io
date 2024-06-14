@@ -1,12 +1,7 @@
 github_users:
-  - torvalds
+  - justog220
   - alshedivat
 
 github_repos:
-  - alshedivat/al-folio
-  - twbs/bootstrap
-  - jekyll/jekyll
-  - jquery/jquery
-  - FortAwesome/Font-Awesome
-  - jpswalsh/academicons
-  - mathjax/MathJax
+  - justog220/ABP-EB
+  - justog220/RBPdb
