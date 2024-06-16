@@ -2,11 +2,11 @@
   type: map
   contents:
     - name: Full Name
-      value: Albert Einstein
+      value: Justo Garcia
     - name: Date of Birth
-      value: 14th March 1879
+      value: 14th November 2002
     - name: Languages
-      value: English, German
+      value: English, Spanish
 
 - title: Education
   type: time_table
